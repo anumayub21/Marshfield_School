@@ -24,76 +24,212 @@
 </nav>
 
 <!-- Main Content -->
-<div class="container"><!-- This holds the main content in the middle of the page -->
-    <div class="content-wrapper">
-        <!-- Left Column (main content) -->
-        <div class="column-left">
-            <h2>Staff Database Search</h2><!-- Smaller heading for this section -->
+<div class="container"> <!-- Main box that holds all the content on the page -->
 
-            <form action="staff_search.php" method="GET"><!-- When the user clicks Search, data is sent to staff_search.php using GET method -->
+    <h2>Staff Database Search</h2> <!-- Heading for the staff search section -->
 
-                <div class="form-row"><!-- This is one row of the form -->
-                    <label>School Name</label><!-- Text label telling the user what to choose -->
-                    <select name="SchoolName"><!-- Dropdown list. The selected value will be called SchoolName -->
-                    <option value="">-- Any --</option> <!-- Default option (means no filter) -->
-                    <option value="Marshfield School">Marshfield School</option><!-- Option 1 -->
-                    <option value="Thornton Lane Board School">Thornton Lane Board School</option> <!-- Option 2 -->
-                    <option value="Chapel Green Board School">Chapel Green Board School</option><!-- Option 3 -->
-                    </select>
-                </div>
+    <form id="staffSearchForm"> <!-- Search form for the staff database -->
+      
+      <div class="form-row"> <!-- One row of the form -->
+        <label>School Name</label> <!-- Label shown to the user -->
+        <select id="SchoolName" name="SchoolName"> <!-- Dropdown list for school name -->
+          <option value="">-- Any --</option> <!-- Default option: no filter -->
+          <option value="Marshfield School">Marshfield School</option> <!-- School option 1 -->
+          <option value="Thornton Lane Board School">Thornton Lane Board School</option> <!-- School option 2 -->
+          <option value="Chapel Green Board School">Chapel Green Board School</option> <!-- School option 3 -->
+        </select>
+      </div>
 
-                <div class="form-row"><!-- Another row in the form -->
-                    <label>Department</label> <!-- Label text -->
-    <select name="Dept"> <!-- Dropdown. The selected value will be called Dept -->
-      <option value="">-- Any --</option> <!-- Default option -->
-      <option value="Junior">Junior</option> <!-- Option -->
-      <option value="Infant">Infant</option> <!-- Option -->
-      <option value="Admin">Admin</option> <!-- Option -->
-    </select>
-  </div>
+      <div class="form-row"> <!-- Another row of the form -->
+        <label>Department</label> <!-- Label shown to the user -->
+        <select id="Dept" name="Dept"> <!-- Dropdown list for department -->
+          <option value="">-- Any --</option> <!-- Default option -->
+          <option value="Junior">Junior</option> <!-- Department option -->
+          <option value="Infant">Infant</option> <!-- Department option -->
+          <option value="Admin">Admin</option> <!-- Department option -->
+        </select>
+      </div>
 
-                <div class="form-row"><!-- Another row -->
-                    <label>Last Name</label><!-- Label -->
-                    <input type="text" name="LastName"> <!-- Text box where user types a last name -->
+      <div class="form-row"> <!-- Another row -->
+        <label>Last Name</label> <!-- Label shown to the user -->
+        <input type="text" id="LastName" name="LastName"> <!-- Text box for entering a surname -->
+      </div>
 
-                </div>
+      <div class="form-row"> <!-- Another row -->
+        <label>Position</label> <!-- Label shown to the user -->
+        <select id="Position" name="Position"> <!-- Dropdown list for staff position -->
+          <option value="">-- Any --</option> <!-- Default option -->
+          <option value="Head Mistress">Head Mistress</option> <!-- Position option -->
+          <option value="Assistant Mistress">Assistant Mistress</option> <!-- Position option -->
+          <option value="Monitor">Monitor</option> <!-- Position option -->
+          <option value="Candidate">Candidate</option> <!-- Position option -->
+        </select>
+      </div>
 
-                <div class="form-row"><!-- Another row -->
-                    <label>Position</label><!-- Label -->
-                    <select name="Position"> <!-- Dropdown. The selected value will be called Position -->
-                        <option value="">-- Any --</option><!-- Default option -->
-                        <option value="Head Mistress">Head Mistress</option> <!-- Option -->
-                        <option value="Assistant Mistress">Assistant Mistress</option><!-- Option -->
-                        <option value="Monitor">Monitor</option><!-- Option -->
-                        <option value="Candidate">Candidate</option><!-- Option -->
-                    </select>
-                </div>
+      <div class="form-row"> <!-- Another row -->
+        <label>Start Year</label> <!-- Label shown to the user -->
+        <input type="text" id="StartYear" name="StartYear"> <!-- Text box for entering a year -->
+      </div>
 
-                <div class="form-row"><!-- Another row -->
-                    <label>Start Year</label> <!-- Label -->
-                    <input type="text" name="StartYear"><!-- Text box where user types a year -->
-                </div>
+      <div class="form-row"> <!-- Final row containing the button -->
+        <button type="submit">Search</button> <!-- Starts the search when clicked -->
+      </div>
+    </form>
 
-                <div class="form-row"><!-- Last row -->
-                    <button type="submit">Search</button><!-- This button sends the form data to staff_search.php -->
-                </div>
+    <hr> <!-- Horizontal line to separate search area from results area -->
 
-            </form>
-        </div>
+    <h2>Staff Search Results</h2> <!-- Heading for the results section -->
 
-        <!-- Right Column (optional sidebar) -->
-        <div class="column-right">
-            <!-- You can add extra info here if needed -->
-        </div>
-
+    <div class="button-row"> <!-- Row that holds the print button -->
+      <button type="button" onclick="printResults()">Print Results</button> <!-- Calls the print function -->
     </div>
+
+    <div id="results" style="margin-top: 30px;"></div> <!-- Empty area where search results will appear -->
 </div>
 
-<!-- Footer -->
-<footer><!-- Bottom section of the page -->
-    Community History Research by Ray Greenhough<!-- Text shown at the bottom -->
-</footer>
+<div class="footer">
+    Community History Research by Ray Greenhough <!-- Footer text shown at the bottom -->
+</div>
 
-</body><!-- End of visible webpage content -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script> <!-- Loads the Supabase library -->
 
-</html> <!-- End of the HTML document -->
+<script>
+  const supabaseUrl = "https://zvuepdhaofafwoiipqsv.supabase.co";
+  // This is the web address of the Supabase project
+
+  const supabaseKey = "sb_publishable_dnLjZNhuCtx2pWT-r8LUeA_S2_aBJmI";
+  // This is the public key used to connect the webpage to Supabase
+
+  const client = supabase.createClient(supabaseUrl, supabaseKey);
+  // Creates the connection between the webpage and the Supabase database
+
+  function printResults() {
+    window.print();
+  }
+  // This function opens the browser print window when the user clicks Print Results
+
+  document.getElementById("staffSearchForm").addEventListener("submit", async function(event) {
+    event.preventDefault();
+    // Stops the page from refreshing when the form is submitted
+
+    const schoolName = document.getElementById("SchoolName").value.trim();
+    // Gets the selected school name and removes extra spaces
+
+    const dept = document.getElementById("Dept").value.trim();
+    // Gets the selected department
+
+    const lastName = document.getElementById("LastName").value.trim();
+    // Gets the surname typed by the user
+
+    const position = document.getElementById("Position").value.trim();
+    // Gets the selected staff position
+
+    const startYear = document.getElementById("StartYear").value.trim();
+    // Gets the year typed by the user
+
+    const resultsDiv = document.getElementById("results");
+    // Finds the results area on the page
+
+    resultsDiv.innerHTML = "<p>Searching...</p>";
+    // Shows a message so the user knows the search is happening
+
+    let query = client.from("Staff").select("*");
+    // Starts a query on the Staff table in the database
+    // select("*") means get all columns
+
+    if (schoolName !== "") {
+      query = query.eq("School Name", schoolName);
+    }
+    // If the user selected a school, only show staff from that school
+
+    if (dept !== "") {
+      query = query.eq("Dept", dept);
+    }
+    // If the user selected a department, only show staff from that department
+
+    if (lastName !== "") {
+      query = query.ilike("Last Name", `%${lastName}%`);
+    }
+    // If the user typed a surname, search for records where the last name contains that text
+    // ilike means the search does not care about capital/lowercase letters
+
+    if (position !== "") {
+      query = query.eq("Position", position);
+    }
+    // If the user selected a position, only show staff with that position
+
+    if (startYear !== "") {
+      query = query.ilike("Year name recorded", `%${startYear}%`);
+    }
+    // If the user typed a year, search for records where the year contains that value
+
+    const { data, error } = await query;
+    // Runs the query and stores the results in "data"
+    // If something goes wrong, the problem is stored in "error"
+
+    if (error) {
+      resultsDiv.innerHTML = `<p>Error: ${error.message}</p>`;
+      return;
+    }
+    // If there is an error, show the error message and stop the code
+
+    if (!data || data.length === 0) {
+      resultsDiv.innerHTML = "<p>No staff records found.</p>";
+      return;
+    }
+    // If no matching staff records are found, show a message
+
+    let html = `<div id="results-summary">Total results: ${data.length}</div>`;
+    // Starts building the HTML that will be shown on the page
+    // Also shows the number of results found
+
+    data.forEach(row => {
+      html += `
+        <div class="result-box">
+          <div class="result-title">
+            ${(row["First Name"] || "")} ${(row["Last Name"] || "")}
+          </div>
+
+          <div class="result-item">
+            <span class="result-label">Title:</span> ${row["Title"] || ""}
+          </div>
+
+          <div class="result-item">
+            <span class="result-label">School:</span> ${row["School Name"] || ""}
+          </div>
+
+          <div class="result-item">
+            <span class="result-label">Department:</span> ${row["Dept"] || ""}
+          </div>
+
+          <div class="result-item">
+            <span class="result-label">Position:</span> ${row["Position"] || ""}
+          </div>
+
+          <div class="result-item">
+            <span class="result-label">Address:</span> ${row["Address"] || ""}
+          </div>
+
+          <div class="result-item">
+            <span class="result-label">Year Name Recorded:</span> ${row["Year name recorded"] || ""}
+          </div>
+
+          <div class="result-item">
+            <span class="result-label">Left School:</span> ${row["Left School"] || ""}
+          </div>
+
+          <div class="result-item">
+            <span class="result-label">Notes:</span> ${row["Notes"] || "Not available"}
+          </div>
+        </div>
+      `;
+    });
+    // This loop goes through each staff record and creates one result box for each person
+
+    resultsDiv.innerHTML = html;
+    // Places the finished results onto the webpage
+
+    resultsDiv.scrollIntoView({ behavior: "smooth" });
+    // Automatically scrolls down to the results section smoothly
+  });
+</script>ent -->
