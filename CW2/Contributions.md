@@ -7,4 +7,4 @@ Sehar Butt
 
 Laiba Waheed 
 
-Javeria Asghar
+Javeria Asghar - Index, page 1a and page 2.
