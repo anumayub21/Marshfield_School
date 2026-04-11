@@ -202,15 +202,18 @@
     // This loop goes through each result from the database
     // and creates one result box for each source
 
-       data.forEach(row => {
+data.forEach(row => {
   html += `
     <div class="result-box">
+      <div class="result-title">${row["Source"] || "No title"}</div>
       ...
     </div>
   `;
 });
 
-    resultsDiv.innerHTML = html;
+console.log(data); // 
+
+resultsDiv.innerHTML = html;
     // Puts the finished results onto the webpage
 
     resultsDiv.scrollIntoView({ behavior: "smooth" });
