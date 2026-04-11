@@ -202,6 +202,14 @@
     // This loop goes through each result from the database
     // and creates one result box for each source
 
+       data.forEach(row => {
+  html += `
+    <div class="result-box">
+      ...
+    </div>
+  `;
+});
+
     resultsDiv.innerHTML = html;
     // Puts the finished results onto the webpage
 
