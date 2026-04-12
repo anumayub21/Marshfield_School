@@ -1,41 +1,33 @@
-Marshfield School History Website
+# Marshfield School History Website
 
-Overview
+This project is a Community Research web application developed as part of the Enterprise Pro module at the University of Bradford.
 
-This project is a web-based database application developed as part of coursework. It focuses on the history of Marshfield School and allows users to view historical information, staff records, and source materials.
+The website provides access to historical information about Marshfield School and related schools. It includes text, images, and linked documents, as well as two searchable databases for staff records and historical sources.
 
-The website includes:
-	•	Static informational pages (HTML/CSS)
-	•	Staff database search
-	•	Sources database search
+## Features
 
-Technologies Used
-	•	HTML
-	•	CSS
-	•	PHP
-	•	MySQL
-	•	XAMPP (for local server)
+- Multiple pages showing historical information
+- Staff Database with search functionality
+- Sources Database with filtering options
+- Links to historical documents and images
 
-Important Note (Search Functionality)
+## Instruction Manual
 
-The Staff and Sources search features are implemented using PHP and MySQL.
+The full instruction manual can be accessed below:
 
-GitHub Pages only supports static content (HTML, CSS, JavaScript), so PHP files cannot run on GitHub.
+[Click here to view the Instruction Manual](docs/Marshfield_Instruction_Manual.pdf)
 
-As a result:
-	•	The website layout and static pages are fully functional on GitHub Pages
-	•	The search functionality (staff and sources) only works on a local server (XAMPP)
+## Technologies Used
 
-How to Run the Full System
-	1.	Install XAMPP
-	2.	Place the project folder inside the htdocs directory
-	3.	Start Apache and MySQL from the XAMPP Control Panel
-	4.	Open the website using:
-http://localhost/your-folder-name/
+- HTML
+- CSS
+- JavaScript
+- Supabase (Database)
 
-GitHub Pages Version
+## Team Members
 
-The live version is available here:
-https://anumayub21.github.io/Marshfield_School/
-
-Note: Search features will not function on this version due to GitHub limitations.
+- Anum Ayub (Team Leader)
+- Javeria Asghar
+- Laiba Waheed
+- Madiha Ali Kousar
+- Sehar Butt
