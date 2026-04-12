@@ -27,7 +27,7 @@ The full instruction manual can be accessed below:
 ## Team Members
 
 - Anum Ayub (Team Leader)
-- Javeria Asghar
-- Laiba Waheed
-- Madiha Ali Kousar
-- Sehar Butt
+- Javeria Asghar (Speaker)
+- Laiba Waheed (Secetary)
+- Madiha Ali Kousar (Team memeber)
+- Sehar Butt (Team memeber)
