@@ -37,7 +37,7 @@ Each unit was tested by checking its functionality and comparing the actual resu
 
 | Unit  | Test |Expected Result |Result| Outcome|
 | ---| --- |---|---|---|
-| Header  | Check heading text matches correct page topic|correct|pass|
+| Header  | Check heading text matches correct page topic|Headings are corrects for each|correct|pass|
 | Image| Load Image| Displays correctly| correct| pass|
 |Navigation| Click each link| Each link opens to the correct page|correct|pass|
 |Sources| Open PDFs and Image links| opens correct sources and to the correct page if PDF|correct|pass|
