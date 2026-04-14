@@ -35,10 +35,14 @@ Each unit was tested by checking its functionality and comparing the actual resu
 - Layout was checked to ensure consistency across different pages
 
 Unit-	Test	-Expected Result	-Result	-Outcome
-| Unit  | Test |
-| ------------- | ------------- |
-| Header  | Check Heading  |
-| Content Cell  | Content Cell  |
+| Unit  | Test |Expected Result |Result| Outcome|
+| ---| --- |---|---|---|
+| Header  | Check heading text matches correct page topic|correct|pass|
+| Image| Load Image| Displays correctly| correct| pass|
+|Navigation| Click each link| Each link opens to the correct page|correct|pass|
+|Sources| Open PDFs and Image links| opens correct sources and to the correct page if PDF|correct|pass|
+|Layout|Load page with css| Follows css layout|correct|pass|
+|Accessibility|Alt text shows if image is unavailable| Present and corrects for the image| corrects| pass|
 
 Header-	Check heading text-Matches correct page topic-correct-pass
 Image-Load image-Displays correctly -	correct	-pass
