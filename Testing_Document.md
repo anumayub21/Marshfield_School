@@ -34,7 +34,7 @@ Each unit was tested by checking its functionality and comparing the actual resu
 - Links to external files (e.g. PDFs) were tested to confirm they opened properly
 - Layout was checked to ensure consistency across different pages
 
-Unit-	Test	-Expected Result	-Result	-Outcome
+
 | Unit  | Test |Expected Result |Result| Outcome|
 | ---| --- |---|---|---|
 | Header  | Check heading text matches correct page topic|correct|pass|
@@ -44,12 +44,7 @@ Unit-	Test	-Expected Result	-Result	-Outcome
 |Layout|Load page with css| Follows css layout|correct|pass|
 |Accessibility|Alt text shows if image is unavailable| Present and corrects for the image| corrects| pass|
 
-Header-	Check heading text-Matches correct page topic-correct-pass
-Image-Load image-Displays correctly -	correct	-pass
-Navigation-Click links-Each link opens to the correct pages-correct-pass
-Sources-Open PdFs and images-Opens correct sources and to correct pages if a PDF-correct-pass
-Layout-Load page with css-Follows css layout-correct-pass
-Accessibility-Alt text shows if image in unavailable-Present and correct for the image-	correct-pass
+
 
 Results
 
