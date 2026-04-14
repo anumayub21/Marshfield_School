@@ -79,8 +79,7 @@ Child pages containing tables of page numbers (e.g., Page 1a, Page 3a, Page 4a�
 Accessibility Considerations
 The interface uses high contrast colours, large clickable areas, and simple typography, ensuring usability for older users and those with visual impairments. The absence of unnecessary animations or complex interactions further supports accessibility.
 3. Fitness for Purpose
-The system directly addresses the client’s stated research challenges, particularly in relation to the Marshfield School archive:
-“I often duplicate research which is not very efficient.” “Any research that I have done should really be made available and visible to my fellow researchers.”
+The system directly addresses the client’s stated research challenges, particularly in relation to the Marshfield School archive.
 The application centralises all staff records, sources, logbooks, admission registers, and archival materials relating to Marshfield School and its associated Board Schools. This eliminates duplicated research and ensures that historical materials are accessible to collaborators and future researchers.
 The structured Images folder and extensive hyperlinking allow rapid access to primary sources, while the SQL databases provide efficient retrieval of staff and source information. The design is intentionally simple and non technical, reflecting the needs of historians who may not have programming experience.
 The instruction manual ensures long term sustainability by enabling the client to adapt the system for future Marshfield School projects or other historical collections:
