@@ -15,7 +15,7 @@ The website provides access to historical information about Marshfield School an
 
 The full instruction manual can be accessed below:
 
-[Click here to view the Instruction Manual](docs/Marshfield_Instruction_Manual.pdf)
+[Click here to view the Instruction Manual][(docs/Marshfield_Instruction_Manual.pdf)](https://github.com/anumayub21/Marshfield_School/blob/main/CW2/Instruction%20Manual.pdf)
 
 ## Technologies Used
 
