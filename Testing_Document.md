@@ -33,6 +33,7 @@ Each unit was tested by checking its functionality and comparing the actual resu
 •	Content sections were reviewed to ensure correct structure and readability 
 •	Links to external files (e.g. PDFs) were tested to confirm they opened properly 
 •	Layout was checked to ensure consistency across different pages
+
 Unit	Test	Expected Result	Result	Outcome
 Header	Check heading text	Matches correct page topic	correct	pass
 Image	Load image	Displays correctly 	correct	pass
