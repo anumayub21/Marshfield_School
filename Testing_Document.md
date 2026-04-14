@@ -35,6 +35,10 @@ Each unit was tested by checking its functionality and comparing the actual resu
 - Layout was checked to ensure consistency across different pages
 
 Unit-	Test	-Expected Result	-Result	-Outcome
+| Unit  | Test |
+| ------------- | ------------- |
+| Header  | Check Heading  |
+| Content Cell  | Content Cell  |
 
 Header-	Check heading text-Matches correct page topic-correct-pass
 Image-Load image-Displays correctly -	correct	-pass
