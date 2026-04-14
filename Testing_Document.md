@@ -42,7 +42,7 @@ Each unit was tested by checking its functionality and comparing the actual resu
 |Navigation| Click each link| Each link opens to the correct page|correct|pass|
 |Sources| Open PDFs and Image links| opens correct sources and to the correct page if PDF|correct|pass|
 |Layout|Load page with css| Follows css layout|correct|pass|
-|Accessibility|Alt text shows if image is unavailable| Present and corrects for the image| corrects| pass|
+|Accessibility|Alt text shows if image is unavailable| Present and corrects for the image| correct| pass|
 
 
 
