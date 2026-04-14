@@ -20,21 +20,22 @@ Unit testing and code inspection were carried out systematically across all page
 Unit testing involves testing individual parts of a program to ensure each component works correctly. In this project, each section of the webpage was treated as a unit and tested independently.
 
 The following units were identified and tested:
-•	Header 
-•	Navigation bar 
-•	Image 
-•	Content sections 
-•	Links (internal and external) 
-•	Footer 
+-	Header
+-		Navigation bar
+-		Image
+-		Content sections
+-		Links (internal and external)
+-		Footer 
 
 Each unit was tested by checking its functionality and comparing the actual result with the expected result.
-•	Navigation links were clicked to ensure they opened the correct pages 
-•	Images were checked to confirm they loaded correctly and included appropriate alt text 
-•	Content sections were reviewed to ensure correct structure and readability 
-•	Links to external files (e.g. PDFs) were tested to confirm they opened properly 
-•	Layout was checked to ensure consistency across different pages
+- Navigation links were clicked to ensure they opened the correct pages
+- Images were checked to confirm they loaded correctly and included appropriate alt text
+- Content sections were reviewed to ensure correct structure and readability
+- 	Links to external files (e.g. PDFs) were tested to confirm they opened properly
+- 		Layout was checked to ensure consistency across different pages
 
 Unit-	Test	-Expected Result	-Result	-Outcome
+
 Header-	Check heading text-Matches correct page topic-correct-pass
 Image-Load image-Displays correctly -	correct	-pass
 Navigation-Click links-Each link opens to the correct pages-correct-pass
@@ -43,6 +44,7 @@ Layout-Load page with css-Follows css layout-correct-pass
 Accessibility-Alt text shows if image in unavailable-Present and correct for the image-	correct-pass
 
 Results
+
 The results of the unit testing showed that all components of the website functioned as expected. Each unit, which included the navigation bar, images, content sections, links, and footer, was tested individually and produced the correct outcomes. All internal and external links opened the intended pages or documents, images loaded correctly and included appropriate alt text for accessibility, and the layout remained consistent across all pages. No errors were identified during testing, and the use of a consistent template ensured that successful results on one page were replicated across the rest of the website.
 
 
