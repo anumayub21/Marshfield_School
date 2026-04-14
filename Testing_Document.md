@@ -21,18 +21,18 @@ Unit testing involves testing individual parts of a program to ensure each compo
 
 The following units were identified and tested:
 -	Header
--		Navigation bar
--		Image
--		Content sections
--		Links (internal and external)
--		Footer 
+-	Navigation bar
+-	Image
+-	Content sections
+-	Links (internal and external)
+-	Footer 
 
 Each unit was tested by checking its functionality and comparing the actual result with the expected result.
 - Navigation links were clicked to ensure they opened the correct pages
 - Images were checked to confirm they loaded correctly and included appropriate alt text
 - Content sections were reviewed to ensure correct structure and readability
-- 	Links to external files (e.g. PDFs) were tested to confirm they opened properly
-- 		Layout was checked to ensure consistency across different pages
+- Links to external files (e.g. PDFs) were tested to confirm they opened properly
+- Layout was checked to ensure consistency across different pages
 
 Unit-	Test	-Expected Result	-Result	-Outcome
 
